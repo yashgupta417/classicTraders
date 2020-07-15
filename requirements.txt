@@ -1,0 +1,20 @@
+argon2-cffi==20.1.0
+asgiref @ file:///tmp/build/80754af9/asgiref_1594338739818/work
+astroid==2.4.2
+bcrypt==3.1.7
+certifi==2020.6.20
+cffi==1.14.0
+colorama==0.4.3
+Django==3.0.3
+djangorestframework==3.11.0
+isort==4.3.21
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+pycparser==2.20
+pylint==2.5.3
+pytz==2020.1
+six==1.15.0
+sqlparse==0.3.1
+toml==0.10.1
+wincertstore==0.2
+wrapt==1.12.1
