@@ -1,5 +1,4 @@
 argon2-cffi==20.1.0
-asgiref @ file:///tmp/build/80754af9/asgiref_1594338739818/work
 astroid==2.4.2
 bcrypt==3.1.7
 certifi==2020.6.20
