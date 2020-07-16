@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
-import shortuuid
+import uuid
 # Create your models here.
 
 class UserManager(BaseUserManager):
@@ -36,7 +36,7 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-    id=models.CharField(default=shortuuid.uuid(),primary_key=True,max_length=255)
+    id=models.CharField(default=uuid.uuid4(),primary_key=True,max_length=255)
     username=models.CharField(max_length=255,unique=True,blank=False,null=False)
     name=models.CharField(max_length=255,blank=True,null=True)
     role=models.CharField(max_length=20,blank=True,null=True)
