@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'classicTraders.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ddq5rtbva1jmor',
+        'USER': 'nmqzcigedzkzrn',
+        'PASSWORD': '5ac1b2ef9ccc1c8f57230c3245033926494d25d5400c22543a0d6815c792920c',
+        'HOST': 'ec2-50-16-198-4.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
