@@ -78,16 +78,20 @@ WSGI_APPLICATION = 'classicTraders.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ddq5rtbva1jmor',
-        'USER': 'nmqzcigedzkzrn',
-        'PASSWORD': '5ac1b2ef9ccc1c8f57230c3245033926494d25d5400c22543a0d6815c792920c',
-        'HOST': 'ec2-50-16-198-4.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'ddq5rtbva1jmor',
+#         'USER': 'nmqzcigedzkzrn',
+#         'PASSWORD': '5ac1b2ef9ccc1c8f57230c3245033926494d25d5400c22543a0d6815c792920c',
+#         'HOST': 'ec2-50-16-198-4.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -144,7 +148,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL='/media/'
 MEDIA_ROOT=MEDIA_DIR
 
-# Heroku: Update database configuration from $DATABASE_URL.
-# import dj_database_url
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+
