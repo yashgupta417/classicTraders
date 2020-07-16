@@ -27,7 +27,7 @@ SECRET_KEY = '08nphxtp_4q$w&8(_pp$9tto%ake2jzzb=*#pab=ze7n66(zyq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://classictraders.herokuapp.com/','localhost']
+ALLOWED_HOSTS = ['classictraders.herokuapp.com','localhost']
 
 
 # Application definition
