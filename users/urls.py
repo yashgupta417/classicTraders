@@ -5,3 +5,8 @@ app_name='users'
 urlpatterns=[   url(r'^signup/$',UserCreateAPIView.as_view()),
                 url(r'^user/(?P<id>\w+)/$',UserDetailAPIView.as_view()),
             ]
+
+from rest_framework.authtoken import views
+urlpatterns += [
+    url(r'^api-token-auth/', views.obtain_auth_token)
+]
