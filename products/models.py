@@ -1,9 +1,9 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-import uuid
+import shortuuid
 # Create your models here.
 class Product(models.Model):
-    id=models.UUIDField(default=uuid.uuid4().hex,primary_key=True,editable=False)
+    id=models.UUIDField(default=shortuuid.uuid(),primary_key=True,editable=False)
     name=models.CharField(max_length=255,blank=False,null=False)
     image=models.ImageField(upload_to='images/products/',null=True,blank=True)
 
