@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'users',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -88,10 +89,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-# Heroku: Update database configuration from $DATABASE_URL.
-# import dj_database_url
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -149,3 +147,7 @@ MEDIA_URL='/media/'
 MEDIA_ROOT=MEDIA_DIR
 
 
+# Heroku: Update database configuration from $DATABASE_URL.
+# import dj_database_url
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
