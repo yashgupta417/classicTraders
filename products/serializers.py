@@ -10,4 +10,4 @@ class ProductSerializer(serializers.ModelSerializer):
 class ProductMiniSerializer(serializers.ModelSerializer):
     class Meta():
         model=Product
-        fields='__all__'
+        exclude=['added_by','last_updated_by']
