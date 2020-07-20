@@ -33,7 +33,7 @@ class ProductDetailAPIView(generics.RetrieveUpdateAPIView):
 
 
 class ProductCreateAPIView(generics.CreateAPIView):
-    serializer_class=ProductMiniSerializer
+    serializer_class=ProductSerializer
 
     authentication_classes=[TokenAuthentication,]
     permission_classes=[IsAuthenticated,]
