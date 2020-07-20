@@ -21,7 +21,7 @@ class Product(models.Model):
     added_by=models.ForeignKey(get_user_model(),related_name='products_added',on_delete=models.CASCADE)
     added_on=models.IntegerField(null=True,blank=True)
 
-    last_updated_by=models.ForeignKey(get_user_model(),related_name='products_last_updated',on_delete=models.CASCADE)
+    last_updated_by=models.ForeignKey(get_user_model(),related_name='products_last_updated',on_delete=models.CASCADE,null=True,blank=True)
     last_updated_on=models.IntegerField(null=True,blank=True)
 
     def __str__(self):
