@@ -5,7 +5,7 @@ from django.contrib.auth.admin import UserAdmin
 # Register your models here.
 class CustomUserAdmin(UserAdmin):
     fieldsets = (
-        (None, {'fields': ('id','username', 'password','name','mobile_number','role','active','staff','admin')}),
+        (None, {'fields': ('user_id','username', 'password','name','mobile_number','role','active','staff','admin')}),
     )
     list_display = ('username', 'name','role')
     list_filter = ('role',)
@@ -13,7 +13,6 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('username',)
     add_fieldsets = (
         (None, {
-            #'classes': ('wide',),
             'fields': ('username', 'password1', 'password2','name','role','mobile_number')}
         ),
     )

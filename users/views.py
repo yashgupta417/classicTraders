@@ -22,7 +22,7 @@ class UserDetailAPIView(generics.RetrieveUpdateAPIView):
     permission_classes=[IsAuthenticated,]
 
     def get_object(self):
-        return get_user_model().objects.get(id=self.kwargs['id'])
+        return get_user_model().objects.get(user_id=self.kwargs['id'])
 
     def get_queryset(self):
         return get_user_model().objects.all()
