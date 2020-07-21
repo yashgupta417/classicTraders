@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'classicTraders.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ddq5rtbva1jmor',
-        'USER': 'nmqzcigedzkzrn',
-        'PASSWORD': '5ac1b2ef9ccc1c8f57230c3245033926494d25d5400c22543a0d6815c792920c',
-        'HOST': 'ec2-50-16-198-4.compute-1.amazonaws.com',
+        'NAME': 'd5k031j8ssqbq3',
+        'USER': 'srqfkuvatcxowa',
+        'PASSWORD': 'd82bbba2d12fc6d4991c1314c4313fab90533dc6b7274c487d3e8f0ffb939c94',
+        'HOST': 'ec2-3-215-83-17.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
